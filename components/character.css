@@ -1,0 +1,29 @@
+.char-float { animation: float 5s ease-in-out infinite; }
+.char-breathe { transform-origin: 120px 260px; animation: breathe 4s ease-in-out infinite; }
+.char-wave { transform-origin: 173px 168px; animation: wave 3.2s ease-in-out infinite; }
+.char-gesture { transform-origin: 67px 168px; animation: gesture 4.4s ease-in-out infinite; }
+.char-blink { transform-box: fill-box; transform-origin: center; animation: blink 5s infinite; }
+.char-mouth { transform-box: fill-box; transform-origin: center; }
+.char-talking .char-mouth { animation: talk 0.26s ease-in-out infinite alternate; }
+.char-talking .char-gesture { animation-duration: 1.8s; }
+
+@keyframes breathe {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(1.018); }
+}
+@keyframes wave {
+  0%, 55%, 100% { transform: rotate(0deg); }
+  62% { transform: rotate(-150deg); }
+  70% { transform: rotate(-120deg); }
+  78% { transform: rotate(-150deg); }
+  86% { transform: rotate(-120deg); }
+  94% { transform: rotate(0deg); }
+}
+@keyframes gesture {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(14deg); }
+}
+@keyframes talk {
+  from { transform: scaleY(0.6); }
+  to { transform: scaleY(3.2); }
+}
